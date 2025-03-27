@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# 💻 Alura Studies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet in the course Alura: Development in typescript
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- 
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- Typescript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Emoji                  | Commit type or Scope | Description                                                                                                     |
+| ---------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| :sparkles:             | feat                 | _feat:_ a new feature                                                                                           |
+| :bug:                  | fix                  | _fix:_ a bug fix                                                                                                |
+| :books:                | docs                 | _docs:_ documentation only changes                                                                              |
+| :gem:                  | style                | _style:_ changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
+| :recycle:              | refactor             | _refactor:_ a code change that neither fixes a bug nor adds a feature                                           |
+| :zap:                  | perf                 | _perf:_ a code change that improves performance                                                                 |
+| :rotating_light:       | test                 | _test:_ adding missing or correcting existing tests                                                             |
+| :wrench:               | chore                | _chore:_ changes to the build process or auxiliary tools and libraries such as documentation generation         |
+| :rocket:               | chore-release        | _chore(release):_ code deployment or publishing to external repositories                                        |
+| :link:                 | chore-deps           | _chore(deps):_ add or delete dependencies                                                                       |
+| :package:              | build                | _build:_ changes related to build processes                                                                     |
+| :construction_worker:  | ci                   | _ci:_ updates to the continuous integration system                                                              |
+| :rocket:               | release              | code deployment or publishing to external repositories                                                          |
+| :lock:                 | security             | Fixing security issues.                                                                                         |
+| :globe_with_meridians: | i18n                 | Internationalization and localization.                                                                          |
+| :boom:                 | breaking             | Introducing breaking changes.                                                                                   |
+| :gear:                 | config               | Changing configuration files.                                                                                   |
+| :heavy_plus_sign:      | add                  | add something                                                                                                   |
+| :heavy_minus_sign:     | remove               | remove something                                                                                                |
