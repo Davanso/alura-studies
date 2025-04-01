@@ -1,6 +1,7 @@
 import style from './list.module.scss'
 import ItemList from "./item/item";
 import {ITask} from "../../types/task";
+import {v4 as uuidv4} from "uuid";
 
 
 function List({ tasks }: { tasks: ITask[]}) {
@@ -15,6 +16,9 @@ function List({ tasks }: { tasks: ITask[]}) {
                         key={index}
                         task={task.task}
                         time={task.time}
+                        selected={false}
+                        completed={false}
+                        id={uuidv4()}
                     />
                 ))}
             </ul>
