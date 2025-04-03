@@ -1,11 +1,36 @@
 import style from "../list.module.scss";
 import { ITask } from "../../../types/task";
 
-export default function ItemList(props: ITask) {
-    const { task, time, selected, completed, id } = props;
-    console.log('Item atual: ', props)
+interface Props extends ITask {
+    handleTaskClick: (task: ITask) => void;
+}
+
+export default function ItemList(
+    {
+        task,
+        time,
+        selected,
+        completed,
+        id,
+        handleTaskClick
+    }: Props){
+
     return (
-        <li className={style.item}>
+        <li
+            className={`
+            ${style.item} 
+            ${selected ? style.selectedItem : ''} 
+            `}
+            // ${completed ? style.completedItem : ''}
+            onClick={() =>
+                handleTaskClick(
+                    {
+                        task,
+                        time,
+                        selected,
+                        completed,
+                        id}
+                )}>
             <h3>{task}</h3>
             <span>{time}</span>
         </li>
