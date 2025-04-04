@@ -23,7 +23,7 @@ function App() {
             <List
                 tasks={tasks}
                 handleTaskClick={handleTaskClick} />
-            <Timer/>
+            <Timer activeTask={activeTask}/>
         </div>
     );
 }

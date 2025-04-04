@@ -1,11 +1,27 @@
 import Button from "../Button";
 import Clock from "./Clock/clock";
 import style from "./timer.module.scss"
+import {ITask} from "../../types/task";
+import {useEffect, useState} from "react";
+import {timeToSeconds} from "../../utils/date";
 
-export default function Timer() {
+interface Props {
+    activeTask: ITask | undefined;
+}
+
+export default function Timer({ activeTask }: Props) {
+    const [time, setTime] = useState<number>(0);
+
+    useEffect(() => {
+        if(activeTask?.time) {
+            setTime(timeToSeconds(activeTask.time));
+        }
+    }, [activeTask]);
+
     return (
         <div className={style.timer}>
             <p className={style.title}>Pick a card and start the timer</p>
+            Tempo: {time}
             <div className={style.timerWrapper}>
                 <Clock/>
             </div>
