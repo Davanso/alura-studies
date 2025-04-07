@@ -18,13 +18,27 @@ export default function Timer({ activeTask }: Props) {
         }
     }, [activeTask]);
 
+    function regressiveTimer(timer: number = 0) {
+        setTimeout(() => {
+            if(timer > 0) {
+                setTime( timer - 1);
+                return regressiveTimer(timer - 1);
+            }
+            if(timer === 0) {
+                setTime(0);
+                return;
+            }
+        }, 1000);
+
+    }
+
     return (
         <div className={style.timer}>
             <p className={style.title}>Pick a card and start the timer</p>
             <div className={style.timerWrapper}>
                 <Clock time={time}/>
             </div>
-            <Button>
+            <Button onClick={ () => regressiveTimer(time)}>
                 Start Timer
             </Button>
         </div>
