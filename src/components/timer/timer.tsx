@@ -21,9 +21,8 @@ export default function Timer({ activeTask }: Props) {
     return (
         <div className={style.timer}>
             <p className={style.title}>Pick a card and start the timer</p>
-            Tempo: {time}
             <div className={style.timerWrapper}>
-                <Clock/>
+                <Clock time={time}/>
             </div>
             <Button>
                 Start Timer
