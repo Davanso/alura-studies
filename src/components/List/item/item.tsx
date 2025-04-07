@@ -20,8 +20,8 @@ export default function ItemList(
             className={`
             ${style.item} 
             ${selected ? style.selectedItem : ''} 
+            ${completed ? style.completedItem : ''}
             `}
-            // ${completed ? style.completedItem : ''}
             onClick={() =>
                 handleTaskClick(
                     {

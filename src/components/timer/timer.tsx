@@ -7,10 +7,11 @@ import {timeToSeconds} from "../../utils/date";
 
 interface Props {
     activeTask: ITask | undefined;
+    endTask: () => void;
 }
 
-export default function Timer({ activeTask }: Props) {
-    const [time, setTime] = useState<number>(0);
+export default function Timer({ activeTask, endTask }: Props) {
+    const [time, setTime] = useState<number>();
 
     useEffect(() => {
         if(activeTask?.time) {
@@ -24,10 +25,7 @@ export default function Timer({ activeTask }: Props) {
                 setTime( timer - 1);
                 return regressiveTimer(timer - 1);
             }
-            if(timer === 0) {
-                setTime(0);
-                return;
-            }
+            endTask();
         }, 1000);
 
     }

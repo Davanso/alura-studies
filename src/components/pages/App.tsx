@@ -17,13 +17,34 @@ function App() {
         })))
     }
 
+function endTask() {
+    if (activeTask) {
+        setActiveTask(undefined);
+        setTasks(prevTasks =>
+            prevTasks.map(task => {
+                if (task.id === activeTask.id) {
+                    return {
+                        ...task,
+                        selected: false,
+                        completed: true
+                    };
+                }
+                return task;
+            })
+        );
+    }
+}
+
     return (
         <div className={style.AppStyle}>
             <Form setTasks={setTasks} />
             <List
                 tasks={tasks}
                 handleTaskClick={handleTaskClick} />
-            <Timer activeTask={activeTask}/>
+            <Timer
+                activeTask={activeTask}
+                endTask={endTask}
+            />
         </div>
     );
 }
